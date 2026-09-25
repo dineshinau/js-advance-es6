@@ -1,0 +1,37 @@
+ES5 & ES6 | ECMAScript 6 in One Video in Hindi
+
+https://www.youtube.com/watch?v=Iek4DtRobLA&t=1255s
+
+Histoy
+Naming and branding of ECMA
+
+The 6 features of ES 6
+
+1. Let and const
+2. Destructuring
+3. Template string ``
+4. Default agruments
+5. Object Properties
+6. Arrow Function
+
+
+1.
+Let and Const
+	var is function scoped and let is block scoped
+Babel:
+	A transplier that convert ES6 code to ES5 code.
+	https://babeljs.io/
+
+2. Destructuring
+	Object descrturing
+
+3. Template string
+	Back tick ``
+
+4. Defualt Arguments
+	Parameter-> function age(a)
+	Arguments -> age(20)
+
+5. Object Properties
+
+6. Arrow functions.

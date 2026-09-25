@@ -1,0 +1,88 @@
+https://namastedev.com/learn/namaste-javascript/
+
+EP:01 How js works and execution context.
+
+Everything in javascript happens inside execution context. Excecution context is a container where the whole javascript is executed. It is like a big box having two components in it. 
+ a. Memory component: Where all the variables and functions are stored as key/value pairs. It is also called as variavle environment.
+ b. Code component: It is the space where all the code is executed one line at a time. Its also known as Thread of execution.
+
+Javascript is a sigle threaded synchronous language.
+
+EP:02 How javascript code is executed and call stack.
+The execution context is created in two phases.
+ a. Memory creation phase: JS engine (V8 in Google Chrome) allocates memory to all the variables and functions.
+ b. Code execution phase: The whole code is executed one line at a time. This execution is managed by call stack. Global execution context is pushed to bottom of the stack. Call stack maintains the order of the execution.
+ Call stack is also known as Execution context stack, Program stack, Control stack, Runtime stack, Machine stack. 
+
+EP:03 Hoisting in javascript (variable and function)
+In JavaScript we can use the variable and function before its initialization or definition. This is called hoisting.
+
+getName(); //Namste JavaScript
+consloe.log(x); // undefined
+
+var x = 7;
+function getName() {
+    console.log("Namste JavaScript);
+}
+
+EP:04 How function work in js and variable environment
+var x=1;
+a();();
+console.log(x);
+function a(){
+    var x = 10;
+    console.log("x");
+}
+fucntion b(){
+    var x = 100;
+    console.log("x");
+}
+
+EP:05 Shortest js program window and this keywords
+index.js
+Global object is created by JS engine.
+this = window
+
+EP:06 Undefined and non-defind in javascript
+undefined is the placeholder assigned to a variable in memory initaly. Not deifned means a variable is not initialized in memeory block.
+Javascript know as loosly typed language or weakly typed language
+
+EP:07 The scope chain, scope and lexical environment.
+Scope in javascript is directly related to the lexical environment. Scope means where you can access a specific variable or function in our code.
+Scope chain is the chain of all lexical environments. The way of finding a variable or function in successive lexical environment is called scope chain.
+
+function a(){
+    console.log(b);
+    c();
+    function c(){
+        b=20;
+        console.log(b);
+    }
+}
+var b=10;
+a();
+
+EP:08 What is a temporal dead zone?
+-> Temporal dead zone is the time since the let/const variable is hoisted and till it is initialized some value.
+
+Are let & const declarations hoisted? -> Yes let and const are hoisted in different way than var. These are in temporal dead zone for time being. 
+
+Difference among SyntaxError, ReferenceError & TypeError?
+
+
+ReferenceError: Cannot access a1 befor initialization.
+
+In case of let, we can not delcare a variable again, it gives SyntaxError and js will not execute a single line of code.
+
+SynatxError: Identifier 'a1' has already been declared at {.js line no}
+
+const is more strict than let. We can not initalize const later after its declaration. Otherwise shows SyntaxError:
+
+SyntaxError: Missing initlizer in const declaration.
+
+Recommendations: Tries to use 'const' first if possible, otherwise let be they have temporal deadzone. Avoid using var anymore.
+
+To avoid temporal dead zone, push every declaration and initialization on the top.
+
+EP: 09
+

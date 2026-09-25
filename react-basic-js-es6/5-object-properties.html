@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Basic</title>
+</head>
+<body>
+<!-- Learning React Basic. -->
+<div class="wrap">
+	<h1>React Basic Learning - Object Properties</h1>
+    <p>See the console for output</p>
+    <script type="text/javascript">
+	    let biodata = {name: 'Dinesh', age: 32, born: 'UP'};
+	    console.log(biodata);
+	    const {name, age, born} = biodata;
+
+	    const defaultVal = { name: name, age: age, born: born}
+        console.log(defaultVal);
+
+	    const shortObj = {name, age, born };
+	    console.log(shortObj)
+
+    </script>
+</div>
+</body>
+
+</html>

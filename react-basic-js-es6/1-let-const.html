@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Basic</title>
+</head>
+<body>
+<!-- Learning React Basic. -->
+<div class="wrap">
+	<h1>React Basic Learning  Let and Const</h1>
+    <p>See the console for output</p>
+    <script type="text/javascript">
+        let myName="Dinesh";
+        console.log(myName);
+        myName="Dinesh Yadav";
+        console.log(myName);
+
+        const Name="Dinesh Kumar";
+        console.log(Name);
+       // Name="Dinesh Kumar Yadav";  //Error.
+        //console.log(Name);
+
+        /** var is function scoped and let is block scoped **/
+        function check(){
+        	let a =10;
+        	if (true){
+        		let a =20;
+        		console.log(a); 20
+            }
+        	console.log(a); //10
+        }
+        check();
+
+        function checks(){
+        	var a=10;
+        	if (true){
+        		var a = 20;
+        		console.log(a); //20
+            }
+        	console.log(a); //20
+        }
+        checks();
+
+    </script>
+</div>
+</body>
+
+</html>

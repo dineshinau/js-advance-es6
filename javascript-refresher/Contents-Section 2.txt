@@ -1,0 +1,14 @@
+11. Module Introduction
+12. Understanding "let" and "const"
+13. Arrow Functions
+14. Exports and Imports
+15. Understanding Classes
+16. Classes, Properties and Methods
+17. The Spread & Rest Operator
+18. Destructuring
+19. Reference and Primitive Types Refresher
+20. Refreshing Array Functions
+21. Wrap Up
+22. Next Gen JS summary
+23. JS Array functions
+
