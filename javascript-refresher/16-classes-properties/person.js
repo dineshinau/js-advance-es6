@@ -7,7 +7,7 @@ class Human {
 
 class Person extends Human{
 	name = 'Dinesh';
-	gender = 'Male;
+	gender = 'Male';
 	printMyName = () => {
 		console.log(this.name)
 	}
