@@ -3,51 +3,49 @@ class Stack {
     constructor() {
         // Initialize your stack
         this.items = [];
-        console.log('Construtor called: '+this.items);
     }
 
     push(a) {
         // Add element to the top
         this.items.push(a);
-        console.log(this.items.length);
+        return this.items.length;
     }
 
-    pop(b) {
+    pop() {
         // Remove and return top element
-        console.log(this.items[this.items.length -1]);
-        this.items.pop();
+        return this.items.pop();
     }
 
     peek() {
         // Return top element without removing
-        console.log(this.items[this.items.length -1]);
+        return this.items[this.items.length -1];
     }
 
     isEmpty() {
-        console.log( this.items.length < 1);
+       return this.items.length < 1;
     }
 
     size() {
-        console.log(this.items.length)
+        return this.items.length
     }
 
     clear() {
         this.items = [];
-        console.log(this.items);
+        return this.items;
     }
 }
 
 const stack = new Stack();
-stack.isEmpty(); //true
-stack.push(10); // 1
-stack.push(20); // 2
-stack.push(30); // 3
-stack.size(); // 3
-stack.peek(); // 30
-stack.pop() //30
-stack.peek(); // 20
-stack.clear()
-stack.isEmpty(); //true
+console.log(stack.isEmpty()); //true
+console.log(stack.push(10)); // 1
+console.log(stack.push(20)); // 2
+console.log(stack.push(30)); // 3
+console.log(stack.size()); // 3
+console.log(stack.peek()); // 30
+console.log(stack.pop()) //30
+console.log(stack.peek()); // 20
+console.log(stack.clear());
+console.log(stack.isEmpty()); //true
 
 //For the purpose of user debugging.
 
