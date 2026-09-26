@@ -10,7 +10,7 @@ class Human {
 class Person extends Human{
 	constructor() {
 		super();
-		this.name = 'Dinesh';
+		this.name = 'Dinesh Kumar Yadav';
 		this.gender = 'Male';
 	}
 	printMyName(){

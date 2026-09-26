@@ -1,8 +1,7 @@
-import person from "./person";
-import prs from "./person";
+import person from "./person.js";
+import prs from "./person.js";
 
-import {baseData} from "./utility";
-import {clean} from "./utility";
+import {baseData, clean} from './utility.js'
 
 console.log(prs)
 console.log(person)
