@@ -1,7 +1,8 @@
 class Stack {
-    constructor(items) {
+    items;
+    constructor() {
         // Initialize your stack
-        this.items = items;
+        this.items = [];
         console.log('Construtor called: '+this.items);
     }
 
@@ -35,8 +36,8 @@ class Stack {
         console.log(this.items);
     }
 }
-let items = [];
-const stack = new Stack(items);
+
+const stack = new Stack();
 stack.isEmpty(); //true
 stack.push(10); // 1
 stack.push(20); // 2
