@@ -1,38 +1,52 @@
 class Stack {
-    items = [];
-    constructor() {
-        this.items = [];
+    constructor(items) {
+        // Initialize your stack
+        this.items = items;
         console.log('Construtor called: '+this.items);
-
     }
 
-    push() {
-        this.items.push();
+    push(a) {
+        // Add element to the top
+        this.items.push(a);
+        console.log(this.items.length);
     }
 
-    pop() {
+    pop(b) {
         // Remove and return top element
+        console.log(this.items[this.items.length -1]);
+        this.items.pop();
     }
 
     peek() {
         // Return top element without removing
+        console.log(this.items[this.items.length -1]);
     }
 
     isEmpty() {
-        // Check if stack is empty
+        console.log( this.items.length < 1);
     }
 
     size() {
-        // Return number of elements
+        console.log(this.items.length)
     }
 
     clear() {
-        // Remove all elements
+        this.items = [];
+        console.log(this.items);
     }
 }
-
-const stack = new Stack();
-
+let items = [];
+const stack = new Stack(items);
+stack.isEmpty(); //true
+stack.push(10); // 1
+stack.push(20); // 2
+stack.push(30); // 3
+stack.size(); // 3
+stack.peek(); // 30
+stack.pop() //30
+stack.peek(); // 20
+stack.clear()
+stack.isEmpty(); //true
 
 //For the purpose of user debugging.
 
