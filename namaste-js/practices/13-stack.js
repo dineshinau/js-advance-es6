@@ -1,5 +1,4 @@
 class Stack {
-    items;
     constructor() {
         // Initialize your stack
         this.items = [];
