@@ -1,12 +1,17 @@
 function getResultByPath(path, obj) {
-   const paths = path.replace(/\[(\d+)\]/g, '.$1').split('.');
+     // Convert bracket notation to dot notation: results[1] -> results.1
+    let normalizedPath = path.replace(/\[(\d+)\]/g, '.$1');
+    let paths = normalizedPath.split('.');
 
     let res = obj;
-   for (const value of paths) {
-     if (res == null) {
+    for (const key of paths) {
+    if ( res === undefined) {
         return undefined;
-       }
-       res = res[value] ?? undefined;
+    }
+      if (res === null ) {
+        return null;
+      }
+        res = res[key];
     }
     return res;
 }
@@ -38,5 +43,5 @@ const obj2 = {
   },
 };
 
-// console.log(getResultByPath(path1, obj1));
+console.log(getResultByPath(path1, obj1));
 console.log(getResultByPath(path2, obj2));
