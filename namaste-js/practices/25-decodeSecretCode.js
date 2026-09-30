@@ -1,14 +1,21 @@
 function decodeSecretCode(s) {
   // your solution
+  // your solution
   let res = '';
-  console.log(s);
-
-  for (let i=0; i<s.length-1; i++) {
-    console.log(i +'-'+s.charCodeAt(i)+'-'+s[i+1]);
-
-    res+= String.fromCharCode(parseInt(s.charCodeAt(i))+parseInt(s[i+1]));
+  if (!s) {
+    return res;
   }
-  console.log(res);
+  if (s.length % 2 !== 0) {
+    return res;
+  }
+  for (let i = 0; i < s.length - 1; i++) {
+    res += String.fromCharCode(parseInt(s.charCodeAt(i)) + parseInt(s[i + 1]));
+    i++;
+  }
+  return res;
 }
 
-console.log(decodeSecretCode("a2b3c1")); //
+console.log(decodeSecretCode("a2b3c1")); // ced
+console.log(decodeSecretCode("x1y2z3")); //
+console.log(decodeSecretCode("a0b0c0")); //
+console.log(decodeSecretCode("")); //
