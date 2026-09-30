@@ -1,6 +1,5 @@
 function decodeSecretCode(s) {
   // your solution
-  // your solution
   if(!s || s.length<1 || s.length % 2 !== 0) return '';
 
   let res = '';
