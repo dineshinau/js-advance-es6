@@ -1,16 +1,12 @@
 function decodeSecretCode(s) {
   // your solution
   // your solution
+  if(!s || s.length<1 || s.length % 2 !== 0) return '';
+
   let res = '';
-  if (!s) {
-    return res;
-  }
-  if (s.length % 2 !== 0) {
-    return res;
-  }
-  for (let i = 0; i < s.length - 1; i++) {
+
+  for (let i = 0; i < s.length; i+=2) {
     res += String.fromCharCode(parseInt(s.charCodeAt(i)) + parseInt(s[i + 1]));
-    i++;
   }
   return res;
 }
