@@ -6,7 +6,14 @@ function decodeSecretCode(s) {
   let res = '';
 
   for (let i = 0; i < s.length; i+=2) {
-    res += String.fromCharCode(parseInt(s.charCodeAt(i)) + parseInt(s[i + 1]));
+    const letter = s[i];
+    const shift = parseInt(s[i+1]);
+
+    if(letter >= 'a' && letter <= 'z'){
+        const newCharCode = letter.charCodeAt(0) + shift;
+        res += String.fromCharCode(newCharCode)
+    }
+    // res += String.fromCharCode(parseInt(s.charCodeAt(i)) + parseInt(s[i + 1]));
   }
   return res;
 }
