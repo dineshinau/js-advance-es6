@@ -29,6 +29,3 @@ console.log(findLargest(input1)); // 3
 console.log(findLargest(input2)); // 4
 console.log(findLargest(input3)); // 3
 console.log(findLargest(input4)); // null
-
-
-
