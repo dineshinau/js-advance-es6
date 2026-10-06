@@ -16,9 +16,18 @@ function reverseWords(sentence) {
     return res;
 }
 
-console.log(reverseWords("Hello World"));      // olleH dlroW
-console.log(reverseWords("JavaScript is fun"));      // tpircSavaJ si nuf
-console.log(reverseWords("   Lead  and   Trial    "));      //   daeL  dna   lairT
-console.log(reverseWords(""));      //
-console.log(reverseWords("OneWord"));      // droWenO
+// Using inbuilt functions
+
+function reverseWords1(sentence) {
+    return sentence.split(/(\s+)/)
+    .map(word => {
+        return word.trim() ? word.split('').reverse().join('') : word // trim with return empty for space string, else convert the word to character array then reverse the array and join to form the get reversered word.
+    }).join('') // join to get the reverse sentence.
+}
+
+console.log(reverseWords1("Hello World"));      // olleH dlroW
+console.log(reverseWords1("JavaScript is fun"));      // tpircSavaJ si nuf
+console.log(reverseWords1("   Lead  and   Trial    "));      //   daeL  dna   lairT
+console.log(reverseWords1(""));      //
+console.log(reverseWords1("OneWord"));      // droWenO
 
